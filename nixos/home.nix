@@ -17,7 +17,6 @@
 	pkgs.firefox
 	pkgs.eza
 	pkgs.rustup
-	pkgs.spotify
 	pkgs.bat
 	pkgs.ripgrep
 	pkgs.gcc
