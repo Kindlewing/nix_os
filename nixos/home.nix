@@ -12,6 +12,7 @@
 	pkgs.swaybg
 	pkgs.kitty
 	pkgs.neovim
+	pkgs.lazygit
 	pkgs.wofi
 	pkgs.wlogout
 	pkgs.firefox
