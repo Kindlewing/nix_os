@@ -29,6 +29,7 @@
 		VISUAL = "/run/current-system/sw/bin/nvim";
 		PAGER = "/run/current-system/sw/bin/less"; 
 		BROWSER = "/run/current-system/sw/bin/firefox";
+		CXX = "/run/current-system/sw/bin/gcc";
 	};
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
