@@ -38,12 +38,18 @@
 	  hyprland = {
 		  recursive = true;
 		  source = ../dotfiles/hypr;
-		  target = "./config/hypr";
+		  target = "./.config/hypr";
 	  };
 	  waybar = {
 		  recursive = true;
 		  source = ../dotfiles/waybar;
-		  target = "./config/waybar";
+		  target = "./.config/waybar";
+	  };
+
+	  kitty = {
+		  recursive = true;
+		  source = ../dotfiles/kitty;
+		  target = "./.config/kitty";
 	  };
   };
 
