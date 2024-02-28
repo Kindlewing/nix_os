@@ -15,14 +15,11 @@
 	system = "x86_64-linux";
 	pkgs = import nixpkgs {
 		inherit system;
-		config = {
-			allowUnfree = true;
-		};
 	};
 	in {
 		nixosConfigurations = {
 			workstation =  nixpkgs.lib.nixosSystem {
-				specialArgs = { inherit inputs system; };
+				specialArgs = { inherit inputs pkgs system; };
 
 				modules = [
 					./nixos/configuration.nix

@@ -17,6 +17,7 @@
 	pkgs.wlogout
 	pkgs.firefox
 	pkgs.eza
+	pkgs.spotify
 	pkgs.rustup
 	pkgs.bat
 	pkgs.ripgrep
