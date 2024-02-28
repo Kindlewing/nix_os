@@ -12,13 +12,13 @@
     ];
 
 	home-manager = {
-		extraSpecialArgs = { inherit inputs; };
+		extraSpecialArgs = { inherit inputs pkgs; };
 		users = {
 			hudson = import ./home.nix;
 		};
 	};
 
-  nixpkgs.config.allowUnfree = true;
+  pkgs.config.allowUnfree = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
