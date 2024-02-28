@@ -20,7 +20,6 @@
 	pkgs.rustup
 	pkgs.bat
 	pkgs.ripgrep
-	pkgs.gcc
 	pkgs.zoxide
   ];
 

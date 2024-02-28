@@ -80,6 +80,7 @@ environment.systemPackages = with pkgs; [
 	xorg.libX11
 	wayland-protocols
 	gcc
+	glibc
 	wl-clipboard
 	mesa
 	unzip
