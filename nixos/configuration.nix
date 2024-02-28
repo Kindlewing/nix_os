@@ -13,6 +13,7 @@
 
 	home-manager = {
 		extraSpecialArgs = { inherit inputs pkgs; };
+		useGlobalPkgs = true;
 		users = {
 			hudson = import ./home.nix;
 		};

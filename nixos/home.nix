@@ -46,7 +46,6 @@
 		  source = ../dotfiles/waybar;
 		  target = "./config/waybar";
 	  };
-
   };
 
   programs.zsh = {
