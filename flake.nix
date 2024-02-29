@@ -12,7 +12,9 @@
 
   outputs = { self, nixpkgs, ... }@inputs: 
 	let 
+	username = "hudson";
 	system = "x86_64-linux";
+
 	pkgs = import nixpkgs {
 		inherit system;
 		config = {
@@ -30,6 +32,7 @@
 				specialArgs = { 
 					inherit inputs;
 					inherit pkgs; 
+					inherit username;
 				};
 
 			};

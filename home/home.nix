@@ -1,6 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
+  imports = [
+  	./browser/firefox.nix
+  ];
+
   home.username = "hudson";
   home.homeDirectory = "/home/hudson";
 
@@ -29,7 +33,7 @@
 		EDITOR = "/run/current-system/sw/bin/nvim";
 		SUDO_EDITOR = "/run/current-system/sw/bin/nvim";
 		VISUAL = "/run/current-system/sw/bin/nvim";
-		PAGER = "/run/current-system/sw/bin/less"; 
+		PAGER = "/run/current-system/sw/bin/less";
 		BROWSER = "/run/current-system/sw/bin/firefox";
 		CXX = "/run/current-system/sw/bin/gcc";
 	};
