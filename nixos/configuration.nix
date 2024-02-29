@@ -70,6 +70,7 @@ environment.systemPackages = with pkgs; [
 	libnotify
 	curl
 	cmake
+	man-pages-posix
 	extra-cmake-modules
 	gnumake
 	wayland
@@ -90,9 +91,9 @@ environment.systemPackages = with pkgs; [
 	curl
 	less
 
-	pkgs.mako
-	pkgs.home-manager
-	(pkgs.waybar.overrideAttrs (oldAttrs: {
+	mako
+	home-manager
+	(waybar.overrideAttrs (oldAttrs: {
 	mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
 	})
 	)
