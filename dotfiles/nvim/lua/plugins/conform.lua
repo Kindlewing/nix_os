@@ -9,7 +9,6 @@ return {
 				lua = { 'stylua' },
 				c = { 'clang_format' },
 				cpp = { 'clang_format' },
-				nix = { 'nixpkgs-format' },
 				javascript = { 'prettier' },
 				typescript = { 'prettier' },
 				javascriptreact = { 'prettier' },
