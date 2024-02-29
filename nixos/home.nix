@@ -52,6 +52,12 @@
 		  source = ../dotfiles/kitty;
 		  target = "./.config/kitty";
 	  };
+
+	  neovim = {
+		  recursive = true;
+		  source = ../dotfiles/nvim;
+		  target = "./config/nvim";
+	  }
   };
 
   programs.zsh = {
