@@ -1,6 +1,8 @@
 {
   description = "My system flake";
 
+
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
@@ -21,12 +23,17 @@
 	};
 	in {
 		nixosConfigurations = {
-			workstation =  nixpkgs.lib.nixosSystem {
-				specialArgs = { inherit inputs pkgs system; };
-
+			system =  nixpkgs.lib.nixosSystem {
+				inherit system; 
 				modules = [
-					./nixos/configuration.nix
+					./system/configuration.nix
 				];
+
+				specialArgs = { 
+					inherit inputs;
+					inherit pkgs; 
+				};
+
 			};
 		};
 	};

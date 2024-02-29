@@ -14,7 +14,7 @@
 	home-manager = {
 		extraSpecialArgs = { inherit inputs pkgs; };
 		users = {
-			hudson = import ./home.nix;
+			hudson = import ../home/home.nix;
 		};
 	};
 
@@ -90,7 +90,6 @@ environment.systemPackages = with pkgs; [
 	xdg-desktop-portal-hyprland
 	curl
 	less
-
 	mako
 	home-manager
 	(waybar.overrideAttrs (oldAttrs: {
