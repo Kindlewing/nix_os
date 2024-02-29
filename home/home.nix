@@ -58,7 +58,7 @@
 		  recursive = true;
 		  source = ../dotfiles/nvim;
 		  target = "./config/nvim";
-	  }
+	  };
   };
 
   programs.zsh = {
