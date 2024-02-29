@@ -19,6 +19,7 @@
 	pkgs.eza
 	pkgs.spotify
 	pkgs.rustup
+	pkgs.go
 	pkgs.bat
 	pkgs.ripgrep
 	pkgs.zoxide
