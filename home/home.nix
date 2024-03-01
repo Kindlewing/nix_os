@@ -2,10 +2,11 @@
 
 {
   imports = [
+  	./zsh.nix
   ];
 
   home.username = username;
-  home.homeDirectory = "/home/hudson";
+  home.homeDirectory = "/home/${username}";
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -34,7 +35,6 @@
 		VISUAL = "/run/current-system/sw/bin/nvim";
 		PAGER = "/run/current-system/sw/bin/less";
 		BROWSER = "/run/current-system/sw/bin/firefox";
-		CXX = "/run/current-system/sw/bin/gcc";
 	};
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -61,31 +61,6 @@
 		  recursive = true;
 		  source = ../dotfiles/nvim;
 		  target = "./config/nvim";
-	  };
-  };
-
-  programs.zsh = {
-	  enable = true;
-	  enableAutosuggestions = true;
-	  enableCompletion = true;
-	  syntaxHighlighting = {
-		  enable = true;
-	  };
-
-	  shellAliases = {
-		ls = "eza -hlX --icons --group-directories-first --color=always";	
-		vim = "nvim";
-		grep = "rg";
-		cat = "bat";
-	  };
-
-	  zplug = {
-		  enable = true;
-		  plugins = [
-			{ name = "zsh-users/zsh-autosuggestions"; }
-			{ name = "zsh-users/zsh-syntax-highlighting"; }
-	  		{ name = "jeffreytse/zsh-vi-mode"; }
-		  ];
 	  };
   };
 
