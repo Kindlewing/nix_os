@@ -2,10 +2,9 @@
 
 {
   imports = [
-  	./browser/firefox.nix
   ];
 
-  home.username = "hudson";
+  home.username = username;
   home.homeDirectory = "/home/hudson";
 
   # The home.packages option allows you to install Nix packages into your
