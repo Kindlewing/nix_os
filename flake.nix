@@ -10,7 +10,7 @@
 	};
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, ... } @inputs: 
 	let 
 	username = "hudson";
 	system = "x86_64-linux";
@@ -22,6 +22,19 @@
 		};
 	};
 	in {
+		homeConfigurations = {
+			username = home-manager.lib.homeManagerConfiguration {
+				pkgs = nixpkgs.legacyPackages.x86_64-linux;
+				extraSpecialArgs = {
+					inherit inputs;
+					inherit username;
+				};
+				modules = [
+					./home/home.nix
+				];
+			};
+		};
+
 		nixosConfigurations = {
 			system =  nixpkgs.lib.nixosSystem {
 				inherit system; 
