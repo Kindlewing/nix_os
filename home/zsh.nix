@@ -1,4 +1,4 @@
-{...}:
+{pkgs, ...}:
 {
 	programs.zsh = {
 	  enable = true;
@@ -15,13 +15,22 @@
 		cat = "bat";
 	  };
 
-	  zplug = {
-		  enable = true;
-		  plugins = [
-			{ name = "zsh-users/zsh-autosuggestions"; }
-			{ name = "zsh-users/zsh-syntax-highlighting"; }
-			{ name = "jeffreytse/zsh-vi-mode"; }
-		  ];
-	  };
+     plugins = [
+	 	{
+			name = "zsh-syntax-highlighting";
+			src = pkgs.zsh-syntax-highlighting;
+			file = "share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh";
+		}
+		{
+			name = "zsh-autosuggestions";
+			src = pkgs.zsh-autosuggestions;
+			file = "share/zsh-autosuggestions/zsh-autosuggestions.zsh";
+		}
+		{
+			name = "vi-mode";
+			src = pkgs.zsh-vi-mode;
+			file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+        }
+	 ];	
 	};
 }

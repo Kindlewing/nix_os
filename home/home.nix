@@ -1,10 +1,14 @@
-{ config, pkgs, username, ... }:
+{ config, pkgs, inputs, username, ... }:
 
 {
   imports = [
-  	./zsh.nix
+  	inputs.nix-colors.homeManagerModules.default
+	./zsh.nix
+	./kitty.nix
+
   ];
 
+  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-material-dark-medium;
   home.username = username;
   home.homeDirectory = "/home/${username}";
 
@@ -14,7 +18,6 @@
   	pkgs.starship
 	pkgs.nodejs
 	pkgs.swaybg
-	pkgs.kitty
 	pkgs.neovim
 	pkgs.lazygit
 	pkgs.wofi
@@ -49,12 +52,6 @@
 		  recursive = true;
 		  source = ../dotfiles/waybar;
 		  target = "./.config/waybar";
-	  };
-
-	  kitty = {
-		  recursive = true;
-		  source = ../dotfiles/kitty;
-		  target = "./.config/kitty";
 	  };
 
 	  neovim = {
