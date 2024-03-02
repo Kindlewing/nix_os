@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+	  ./nix-ld.nix
 	  inputs.home-manager.nixosModules.home-manager
     ];
 
@@ -57,9 +58,8 @@ programs.hyprland = {
     xwayland.enable = true;
 };
 
-programs.zsh = {
-    enable = true;
-};
+
+
 
 fonts.packages = with pkgs; [
 	(nerdfonts.override { fonts = ["FiraCode"]; })
@@ -114,7 +114,7 @@ hardware = {
     opengl.enable = true;
 };
 
-
+programs.zsh.enable = true;
 
   services.printing.enable = true;
   hardware.bluetooth.enable = true;
