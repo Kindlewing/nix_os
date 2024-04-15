@@ -82,6 +82,7 @@ environment.systemPackages = with pkgs; [
 	SDL.dev
 	SDL2
 	SDL2.dev
+	linux-headers
 	xorg.libX11
 	bear
 	wayland-protocols
