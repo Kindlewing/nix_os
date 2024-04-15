@@ -79,13 +79,13 @@ environment.systemPackages = with pkgs; [
 	pkg-config
 	git
 	SDL
+	SDL.dev
 	SDL2
 	SDL2.dev
 	xorg.libX11
 	bear
 	wayland-protocols
 	gcc
-	glibc
 	clang-tools
 	wl-clipboard
 	mesa
