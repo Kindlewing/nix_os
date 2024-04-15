@@ -78,10 +78,12 @@ environment.systemPackages = with pkgs; [
 	libxkbcommon
 	pkg-config
 	git
+	SDL2
 	xorg.libX11
 	wayland-protocols
 	gcc
 	glibc
+	clang-tools
 	wl-clipboard
 	mesa
 	unzip
