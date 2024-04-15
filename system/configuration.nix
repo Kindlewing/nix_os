@@ -78,8 +78,11 @@ environment.systemPackages = with pkgs; [
 	libxkbcommon
 	pkg-config
 	git
+	SDL
 	SDL2
+	SDL2.dev
 	xorg.libX11
+	bear
 	wayland-protocols
 	gcc
 	glibc
